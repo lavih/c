@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'master' }
+    agent { label 'centos7' }
     environment {
         ImageTag="c:c17"
     }
