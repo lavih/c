@@ -7,6 +7,7 @@ pipeline {
         stage('Compile C') {
             steps {
                 echo 'Compiling...'
+                sh "pwd && ls -la"
                 sh 'gcc src/code.c -o dist/code'
             }
         }
