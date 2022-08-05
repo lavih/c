@@ -1,4 +1,4 @@
-ImageTag="c:c17"
+def ImageTag="c:c17"
 pipeline {
     agent any
     stages {
