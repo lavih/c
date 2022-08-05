@@ -6,14 +6,14 @@ pipeline {
     stages {
         stage('Compile C') {
             steps {
-                echo 'Compiling...'
-                sh "pwd && ls -la"
-                sh 'gcc src/code.c -o dist/code'
+                echo "Compiling..."
+                sh "gcc src/code.c -o dist/code"
             }
         }
         stage('Test Code') {
             steps {
-                echo 'Testing..'
+                echo "Testing.."
+                sh "dist/code"
             }
         }
         // stage('Build Dockerfile') {
