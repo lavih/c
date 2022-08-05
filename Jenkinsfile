@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('Compile C') {
             steps {
-                echo 'Building..'
+                echo 'Compiling...'
+                sh 'gcc src/code.c -o dist/code'
             }
         }
         stage('Test Code') {
@@ -14,13 +15,13 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Build Dockerfile') {
-            steps {
-                script {
-                def customImage = docker.build("$ImageTag-${env.BUILD_ID}")
-                echo 'Deploying....'
-                }
-            }
-        }
+        // stage('Build Dockerfile') {
+        //     steps {
+        //         script {
+        //         def customImage = docker.build("$ImageTag-${env.BUILD_ID}")
+        //         echo 'Deploying....'
+        //         }
+        //     }
+        // }
     }
 }
