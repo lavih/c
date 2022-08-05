@@ -9,3 +9,9 @@ gcc program-source-code.c -o executable-file-name
 # make
 # assuming that executable-file-name.c exists
 make executable-file-name
+
+# check c version
+gcc -dM -E - < /dev/null | grep __STDC_VERSION__ | awk '{ print $2 " --> " $3 }'
+
+# check gcc compiler version
+gcc --version
