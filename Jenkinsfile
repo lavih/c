@@ -1,6 +1,8 @@
-def ImageTag="c:c17"
 pipeline {
-    agent any
+    agent { label 'master' }
+    environment {
+        ImageTag="c:c17"
+    }
     stages {
         stage('Compile C') {
             steps {
