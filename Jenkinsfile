@@ -16,8 +16,10 @@ pipeline {
         }
         stage('Build Dockerfile') {
             steps {
-                def cImage = docker.build("$ImageTag-${env.BUILD_ID}")
+                script {
+                def customImage = docker.build("$ImageTag-${env.BUILD_ID}")
                 echo 'Deploying....'
+                }
             }
         }
     }
