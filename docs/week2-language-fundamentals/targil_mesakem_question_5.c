@@ -11,4 +11,3 @@ int main()
     printf("%.3f\n",&num);
     return 0;
 }
-
