@@ -7,7 +7,7 @@ int main()
     float num;
     printf("Please enter a number:\n");
     scanf("%f",&num);
-    printf("%f\n",&num);
-    printf("%.3f\n",&num);
+    printf("The number is: %f\n",num);
+    printf("Value after edit: %08.3f\n",num);
     return 0;
 }
